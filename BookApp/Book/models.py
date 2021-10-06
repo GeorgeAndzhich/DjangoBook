@@ -5,3 +5,6 @@ class Book(models.Model):
     title = models.CharField(max_length=30)
     author = models.CharField(max_length=30)
     comment = models.TextField()
+
+    def __str__(self):
+        return self.title
