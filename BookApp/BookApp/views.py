@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def main(request, *args, **kwargs):
+def main(request):
     return render(request, 'BookApp/index.html',{})
