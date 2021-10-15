@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from .views import BookListView
+from Book import views
 
 urlpatterns = [
-    path('', BookListView.as_view())
+    path('', views.read,name = "index")
 ]

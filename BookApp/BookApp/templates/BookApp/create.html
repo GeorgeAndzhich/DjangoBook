@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All your books</title>
+    <title>Create new book</title>
 </head>
-<p>These are all the books you have added.</p>
+
 <body>
-    {% for book in books %}
-    <a href="">{{ book.title }}</a>
-    <p> {{book.author}}</p>
-    {% endfor %}
+    {%csrf_token%}
+    {{form}}
 </body>
+
 </html>

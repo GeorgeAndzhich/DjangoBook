@@ -1,19 +1,18 @@
-from django.shortcuts import render
-from django.views.generic import CreateView,DeleteView,ListView,UpdateView
+from django.shortcuts import render,redirect
 from .models import Book
 from django.urls import reverse_lazy
 
 # Create your views here.
-class CreateBookView(CreateView):
-    model = Book
-    template_name = 'Book/create.html'
+def read(request):
+    books = Book.objects.all()
+    context = {"book":books}
+    return render (request,"Book/book_list.html",context)
+
+def create(request):
     pass
 
-
-class BookListView(ListView):
-    model = Book
-    template_name = 'Book/index.html'
+def update(request):
     pass
 
-class UpdateBookView(UpdateView):
+def delete(request):
     pass
