@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BookApp",
+    "\\BookApp\\Book",
+    "\\BookApp\\BookApp",
+    "\\BookApp\\BookApp\\templates",
+    "\\BookApp\\BookApp\\templates\\BookApp",
+    "\\BookApp\\Book\\templates",
+    "\\BookApp\\Book\\templates\\Book"
+  ],
+  "SelectedNode": "\\BookApp\\BookApp\\views.py",
+  "PreviewInSolutionExplorer": false
+}
