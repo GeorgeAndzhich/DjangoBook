@@ -9,6 +9,6 @@
     "\\BookApp\\Book\\templates",
     "\\BookApp\\Book\\templates\\Book"
   ],
-  "SelectedNode": "\\BookApp\\BookApp\\views.py",
+  "SelectedNode": "\\BookApp\\Book\\templates\\Book\\book_create.html",
   "PreviewInSolutionExplorer": false
 }
