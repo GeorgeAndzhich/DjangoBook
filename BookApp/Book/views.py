@@ -11,19 +11,20 @@ def read(request):
     context = {"book":books}
     return render (request,"Book/book_list.html",context)
 
-@csrf_protect
+
 def create(request): 
     form = BookForm()
     if request.method == "POST":
         form = BookForm(request.POST)
         if form.is_valid():
-           # book = Book()
-           # book.title = form.cleaned_data["title"]
-           # book.author = form.cleaned_data["author"]
+            #book = Book()
+            #book.title = form.cleaned_data["title"]
+            #book.author = form.cleaned_data["author"]
             #book.comment = form.cleaned_data["comment"]
             form.save()
-           # book.save()
-            return HttpResponseRedirect('/')
+            #book.save()
+            return redirect('/')
+    else:
         context = {"form":form}
         return render(request,"Book/book_create.html",context)
 
