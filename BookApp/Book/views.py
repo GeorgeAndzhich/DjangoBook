@@ -3,6 +3,7 @@ from .models import Book
 from .forms import BookForm
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import *
+from django.http import *
 
 # Create your views here.
 def read(request):
@@ -16,17 +17,21 @@ def create(request):
     if request.method == "POST":
         form = BookForm(request.POST)
         if form.is_valid():
-            book = Book()
-            book.title = form.cleaned_data["title"]
-            book.author = form.cleaned_data["author"]
-            book.comment = form.cleaned_data["comment"]
+           # book = Book()
+           # book.title = form.cleaned_data["title"]
+           # book.author = form.cleaned_data["author"]
+            #book.comment = form.cleaned_data["comment"]
             form.save()
-            book.save()
-            return redirect('/')
-    else:
+           # book.save()
+            return HttpResponseRedirect('/')
         context = {"form":form}
         return render(request,"Book/book_create.html",context)
 
+
+def detail_view(request,id):
+    book = Book.objects.get(id = id)
+    context = {"object":book}
+    return render(request,"Book/book_detail.html",context)
 
 def update(request):
     pass
